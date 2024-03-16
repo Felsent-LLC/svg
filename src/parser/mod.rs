@@ -51,6 +51,10 @@ impl<'l> Parser<'l> {
         }
     }
 
+    pub fn position(&self) -> (usize, usize) {
+        self.reader.position()
+    }
+
     fn next_angle(&mut self) -> Option<Event<'l>> {
         let content: String = self.reader.peek_many().take(4).collect();
         if content.is_empty() {
