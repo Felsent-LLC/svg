@@ -51,7 +51,7 @@ impl<'l> Parser<'l> {
         }
     }
 
-    pub fn position(&self) -> (usize, usize) {
+    pub fn reader_position(&self) -> (usize, usize) {
         self.reader.position()
     }
 
